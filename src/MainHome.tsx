@@ -4,7 +4,9 @@ function MainHome() {
             <div className="rounded-3xl bg-white grid grid-cols-12 grid-rows-6 gap-4 p-1 bento">
                 <div
                     className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-3 row-span-3
-                     flex justify-center items-center text-center">Final Fantasy vilains
+                     flex justify-center items-center text-center">
+                    <img src={require("./assets/ff1.gif")} className="object-cover rounded-3xl"/>
+                    <p className={"text-8xl absolute justify-center z-30 font-miriadpro text-white"}>FF1</p>
                 </div>
                 <div
                     className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-3 row-span-3 flex justify-center items-center text-center relative">
@@ -14,18 +16,17 @@ function MainHome() {
                 </div>
                 <div
                     className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-6 row-span-3 flex justify-center items-center text-center">
+                    <img src={require("./assets/sephiroth.gif")} className="w-full h-full object-cover rounded-3xl z-0" alt="Sephiroth"/>
+                    <p className="text-8xl absolute justify-center z-30 font-miriadpro text-white">Vilains</p>
                 </div>
                 <div
                     className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-6 row-span-3 flex justify-center items-center text-center">
                     <img src={require("./assets/final_fantasy_theatrhythm.png")} className="object-cover hover:animate-zoom-in" alt="Final Fantasy theatrhythm"/>
                 </div>
                 <div
-                    className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-3 row-span-3 flex justify-center items-center text-center">
-                    Final Fantasy Espers
-                </div>
-                <div
-                    className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-3 row-span-3 flex justify-center items-center text-center">
-                    Story creation of Final Fantasy
+                    className="rounded-3xl bg-slate-100 border-2 border-gray-200 col-span-6 row-span-3 flex justify-center items-center text-center">
+                    <img src={require("./assets/hero_final_fantasy.gif")} className="w-full h-full flex object-cover rounded-3xl"/>
+                    <p className="text-8xl absolute justify-center z-30 font-miriadpro text-white">Heroes</p>
                 </div>
             </div>
         </div>
