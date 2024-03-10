@@ -59,3 +59,8 @@
     font-size: 12rem/* 128px */;
     line-height: 1;
 }
+
+.bento {
+    width: 95%;
+    height: 95%;
+}
