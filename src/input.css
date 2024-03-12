@@ -55,6 +55,22 @@
     animation-fill-mode: forwards;
 }
 
+@keyframes flash-infinite {
+    0%,100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+}
+
+.animate-flash-infinite {
+    animation: flash-infinite 2s infinite;
+    opacity: 0;
+    animation-delay: 3.6s;
+}
+
 .text-xxl {
     font-size: 12rem/* 128px */;
     line-height: 1;

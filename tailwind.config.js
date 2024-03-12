@@ -5,8 +5,8 @@ module.exports = {
     extend: {
         fontFamily: {
             'pixelify': ['pixelify', 'sans'],
-            'finalfantasy': ['finalfantasy', 'finalfantasy'],
             'finalf': ['finalf', 'finalfantasy'],
+            'miriadpro': ['miriadpro', 'sans-serif'],
         },
         animation: {
             'slide-up': 'slide-up 1.2s ease-out',
@@ -16,7 +16,7 @@ module.exports = {
                 '0%': { transform: 'translateY(400%)', opacity: 0},
                 '100%': { transform: 'translateY(0)', opacity: 1},
             },
-        }
+        },
     },
   },
   plugins: [],
