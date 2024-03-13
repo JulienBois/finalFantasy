@@ -17,6 +17,9 @@ module.exports = {
                 '100%': { transform: 'translateY(0)', opacity: 1},
             },
         },
+        backgroundImage: {
+            'ff-7': "url('/src/assets/background/ff7_background.jpg')",
+        }
     },
   },
   plugins: [],
