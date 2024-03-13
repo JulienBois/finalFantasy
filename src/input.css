@@ -90,18 +90,28 @@
 .cursor:hover::before {
     content: url("./assets/cursor.png");
     transform: translateY(-20px) translateX(50px);
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding around text */
+    padding-right: 10px; /* Padding around text */
     border: none; /* No border */
     display: inline-block;
     vertical-align: middle;
     animation: cursor 1.3s infinite;
 }
-button span {
+button .ff13 {
     position: relative;
 }
 
-button span::after {
+button .classic::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    transform: translateX(-10vw);
+    width: 15vw;
+    background: linear-gradient(to right, transparent, black, transparent);
+}
+
+
+button .ff13::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -112,11 +122,47 @@ button span::after {
     background: linear-gradient(to right, transparent, black, transparent);
 }
 
+button .ff7 {
+    position: relative;
+}
 
-@media (min-width: 768px) {
-    .button-54 {
-        padding: 0.25em 0.75em;
-    }
+button .ff7 {
+    content: '';
+    position: absolute;
+}
+
+button .ff7 {
+    content: '';
+    display: inline-flex;
+    color: white;
+    padding: 0.5vh 1vw;
+    margin-top: 0.4vh;
+    position:relative;
+    width:20vw;
+    background: linear-gradient(to right, #00007c, #00007c, transparent, transparent);
+}
+
+button .ff7::before {
+    content: '';
+    position: absolute;
+    left: 0; /* Adjust as needed */
+    top: 0;
+    bottom: 0;
+    width: 3px; /* Adjust as needed */
+    background-color: rgba(91, 186, 255, 0.55); /* Default color */
+}
+
+button .ff7:hover::before {
+    background-color: #DEFBFC;
+    box-shadow: #0784ea -3px 0px 20px 1px;
+}
+
+button .ff7:hover {
+    content: '';
+    display: inline-flex;
+    position:relative;
+    background: linear-gradient(to right, #1E72A0, #053B61, #020C18, transparent);
+    z-index:5;
 }
 
 
