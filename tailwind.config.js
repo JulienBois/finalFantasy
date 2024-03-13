@@ -13,7 +13,7 @@ module.exports = {
         },
         keyframes: {
             'slide-up': {
-                '0%': { transform: 'translateY(400%)', opacity: 0},
+                '0%': { transform: 'translateY(150%)', opacity: 0},
                 '100%': { transform: 'translateY(0)', opacity: 1},
             },
         },
