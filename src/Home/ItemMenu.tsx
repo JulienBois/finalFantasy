@@ -3,6 +3,7 @@ import React, {FC} from "react";
 interface MenuProps {
     title: string;
     padding?: number;
+    customStyle?: string;
 }
 
 type PaddingMap = {
@@ -17,12 +18,12 @@ const paddings: PaddingMap = {
     4: 'pl-[26vw]',
 }
 
-const ItemMenu: FC<MenuProps> = ({title, padding}) => {
+const ItemMenu: FC<MenuProps> = ({title, padding,customStyle }) => {
     const className = paddings[padding!];
     return (
         <div>
-            <button className={`${className} pt-[1vh]relative cursor`}>
-                <span className=" text-3xl font-miriadpro ">{title}</span></button>
+            <button className={`${className !== undefined ? className : 'pl-[10vw]'} relative cursor`}>
+                <span className={` text-3xl font-miriadpro ${customStyle !== undefined ? customStyle : 'classic'}`} >{title}</span></button>
         </div>
     );
 }
