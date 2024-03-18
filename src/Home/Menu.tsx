@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useState, useRef } from "react";
 import ItemMenu from "./ItemMenu";
 import {Saga} from "../interfaces/Saga";
 
@@ -15,18 +15,37 @@ const options = [
 ]
 
 const Menu: FC<MenuProps> = ({saga}) => {
+    const [showVideo, setShowVideo] = useState(false);
+    const audioRef = useRef(null);
+    const handleAudioEnd = () => {
+        setShowVideo(true);
+    }
+
+    const handleVideoClick = () => {
+        setShowVideo(false);
+    }
+
     return (
-        <div className={`${saga.background} bg-center h-screen w-screen z-0 `}>
-            <div className="flex justify-center items-center h-[70vh]">
-                <img src={saga.logo} className="absolute z-10" alt="Final Fantasy"/>
-                <h1 className="text-xxl font-finalf tracking-widest z-20 line z-1">FINAL
-                    FANTASY</h1>
-            </div>
-            <div className=" h-[40vh] py-14 absolute bottom-0">
-                {options.map((i, index) => (
-                    <ItemMenu title={i} key={i} padding={saga.customStyle !== undefined ? undefined : index} customStyle={saga.customStyle}/>
-                ))}
-            </div>
+        <div className={`h-screen w-screen overflow-hidden relative`}>
+            {(saga.opening !== undefined && showVideo) ? (
+                <video onClick={handleVideoClick} autoPlay={true} controls={false} onEnded={handleVideoClick}>
+                    <source className="absolute aspect-video w-screen h-screen object-center" src={saga.opening} type="video/mp4"/>it supports the video</video>
+            ) : (
+                <div className={`${saga.background} bg-center h-screen w-screen`}>
+                    <audio ref={audioRef} src={saga.mainTheme} autoPlay loop={saga.opening === undefined} onEnded={handleAudioEnd}/>
+                    <div className="flex justify-center items-center h-[70vh]">
+                        <img src={saga.logo} className="absolute z-10" alt="Final Fantasy"/>
+                        <h1 className="text-xxl font-finalf tracking-widest z-20 line">FINAL
+                            FANTASY</h1>
+                    </div>
+                    <div className=" h-[40vh] py-14 absolute bottom-0">
+                        {options.map((i, index) => (
+                            <ItemMenu title={i} key={i} padding={saga.customStyle !== undefined ? undefined : index}
+                                      customStyle={saga.customStyle}/>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

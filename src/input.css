@@ -96,9 +96,7 @@
     vertical-align: middle;
     animation: cursor 1.3s infinite;
 }
-button .ff13 {
-    position: relative;
-}
+
 
 button .classic::after {
     content: '';
@@ -111,20 +109,7 @@ button .classic::after {
 }
 
 
-button .ff13::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    left: 15vw; /* Start the gradient in the middle */
-    transform: translateX(-20vw); /* Center the gradient */
-    width: 15vw;
-    background: linear-gradient(to right, transparent, black, transparent);
-}
 
-button .ff7 {
-    position: relative;
-}
 
 button .ff7 {
     content: '';
@@ -137,8 +122,8 @@ button .ff7 {
     color: white;
     padding: 0.5vh 1vw;
     margin-top: 0.4vh;
-    position:relative;
-    width:20vw;
+    position: relative;
+    width: 20vw;
     background: linear-gradient(to right, #00007c, #00007c, transparent, transparent);
 }
 
@@ -160,9 +145,9 @@ button .ff7:hover::before {
 button .ff7:hover {
     content: '';
     display: inline-flex;
-    position:relative;
-    background: linear-gradient(to right, #1E72A0, #053B61, #020C18, transparent);
-    z-index:5;
+    position: relative;
+    background: linear-gradient(to right, #77F5FF, #357BF6, #020C18, #0E2C65, transparent);
+    z-index: 5;
 }
 
 
