@@ -20,9 +20,20 @@ const paddings: PaddingMap = {
 
 const ItemMenu: FC<MenuProps> = ({title, padding,customStyle }) => {
     const className = paddings[padding!];
+    const audioHover = new Audio(require('../assets/sound_effects/hover_sound.wav'));
+    const audioClick = new Audio(require('../assets/sound_effects/click_sound.wav'));
+
+    const playHover = () => {
+        audioHover.play();
+    }
+
+    const playClick = () => {
+        audioClick.play();
+    }
+
     return (
         <div>
-            <button className={`${className !== undefined ? className : 'pl-[10vw]'} relative cursor`}>
+            <button className={`${className !== undefined ? className : 'pl-[10vw]'} relative cursor`} onClick={playClick} onMouseOver={playHover}>
                 <span className={` text-3xl font-miriadpro ${customStyle !== undefined ? customStyle : 'classic'}`} >{title}</span></button>
         </div>
     );
