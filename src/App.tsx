@@ -21,7 +21,7 @@ const logos:Saga[] = [
     { logo: require("./assets/logos/ff12-2_logo.png"), mainTheme: require("./assets/musics/ffXII.mp3"), opening: require("./assets/openings/ffXII_opening.mp4") },
     { logo: require("./assets/logos/ff13_logo.png"), mainTheme: require("./assets/musics/ffXIII.mp3"), opening: require("./assets/openings/ffXIII_opening.mp4") },
     { logo: require("./assets/logos/ff13-2_logo.png"), mainTheme: require("./assets/musics/ffXIII.mp3"), opening: require("./assets/openings/ffXIII_opening.mp4") },
-    { logo: require("./assets/logos/ff14_logo.png"), mainTheme: require("./assets/musics/ffXIV.mp3") },
+    { logo: require("./assets/logos/ff14_logo.png"), mainTheme: require("./assets/musics/ffXIV.mp3"), opening: require("./assets/openings/ffXIV_opening.mp4") },
     { logo: require("./assets/logos/ff15_logo.png"), mainTheme: require("./assets/musics/ffXV.mp3") },
     { logo: require("./assets/logos/ff16_logo.png"), mainTheme: require("./assets/musics/ffXVI.mp3") },
     { logo: require("./assets/logos/ff_dissidia_logo.png"), mainTheme: require("./assets/musics/ffI.mp3") },

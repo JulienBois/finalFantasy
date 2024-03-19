@@ -26,10 +26,10 @@ const Menu: FC<MenuProps> = ({saga}) => {
     }
 
     return (
-        <div className={`h-screen w-screen overflow-hidden relative`}>
+        <div className={`h-screen w-screen relative`}>
             {(saga.opening !== undefined && showVideo) ? (
-                <video onClick={handleVideoClick} autoPlay={true} controls={false} onEnded={handleVideoClick}>
-                    <source className="absolute aspect-video w-screen h-screen object-center" src={saga.opening} type="video/mp4"/>it supports the video</video>
+                <video onClick={handleVideoClick} autoPlay={true} controls={false} className="bg-black fixed aspect-video inset-0 w-full h-full object-center" onEnded={handleVideoClick}>
+                    <source src={saga.opening} type="video/mp4"/>it supports the video</video>
             ) : (
                 <div className={`${saga.background} bg-center h-screen w-screen`}>
                     <audio ref={audioRef} src={saga.mainTheme} autoPlay loop={saga.opening === undefined} onEnded={handleAudioEnd}/>
